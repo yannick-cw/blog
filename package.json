@@ -1,13 +1,13 @@
 {
-  "name": "gatsby-starter-tech-blog",
+  "name": "yannick-gladow-blog",
   "version": "1.0.0",
-  "description": "A Gatsby Starter Tech Blog template",
+  "description": "dev-log",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/email2vimalraj/gatsby-starter-tech-blog"
+    "url": "https://github.com/yannick-cw/blog"
   },
-  "author": "Vimalraj Selvam",
+  "author": "Yannick Gladow",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
