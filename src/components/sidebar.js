@@ -110,9 +110,19 @@ const NameBoard = styled.h5`
 
 const Portrait = styled.img`
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: cover; 
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Device = Low resolution Tablets, Mobiles (landscape) */
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
  `
 
 export default ({ title, authorName }) => (
