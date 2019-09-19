@@ -11,7 +11,7 @@ The `*` command is awesome in Vim, as it let's you search for the word currently
 keystrokes: `*`
 
 
-But unfortunately if you to the same on a visual selection of multiple words it searches only for the word under the cursor
+But unfortunately if you do the same on a visual selection of multiple words it searches only for the word under the cursor
 as well, but not for the whole selection.
 
 The [visual star plugin](https://github.com/bronson/vim-visual-star-search) is very nice for exactly that feature.
