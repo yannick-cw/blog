@@ -6,8 +6,7 @@ date=`date +"%Y-%m-%d"`
 filename=${TITLE// /_}
 
 cd /Users/yannick/otherworkspace/blog
-echo "
----
+echo "---
 title: '$TITLE'
 date: '$date'
 tags: []
