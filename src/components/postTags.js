@@ -14,7 +14,7 @@ export default ({ tags }) => {
   return (
     <>
       {tags.map((tag, index) => {
-        let separator = '| '
+        let separator = ' | '
         if (index + 1 === tags.length) {
           separator = ''
         }
