@@ -6,7 +6,6 @@ const TagLink = styled(Link)`
   font-size: 14px;
   color: #ffbf00;
   text-decoration: none;
-  margin-left: 10px;
   text-transform: uppercase;
 `
 

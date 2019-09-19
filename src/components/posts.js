@@ -9,9 +9,10 @@ const PostTitle = styled.h3`
   margin-bottom: ${rhythm(1 / 4)};
 `
 
-const PostDate = styled.span`
+export const PostDate = styled.span`
   color: #8e8e8e;
   font-size: 14px;
+  margin-right: 10px;
 `
 
 const PostLink = styled(Link)`
