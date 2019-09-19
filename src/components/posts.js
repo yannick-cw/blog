@@ -17,7 +17,6 @@ const PostDate = styled.span`
 const PostLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-  font-style: italic;
 `
 
 export default ({ data }) => {

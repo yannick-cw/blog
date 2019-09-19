@@ -6,13 +6,15 @@ const TagLink = styled(Link)`
   font-size: 14px;
   color: #ffbf00;
   text-decoration: none;
+  margin-left: 10px;
+  text-transform: uppercase;
 `
 
 export default ({ tags }) => {
   return (
     <>
       {tags.map((tag, index) => {
-        let separator = ', '
+        let separator = '| '
         if (index + 1 === tags.length) {
           separator = ''
         }

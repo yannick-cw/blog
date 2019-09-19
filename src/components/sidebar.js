@@ -72,6 +72,7 @@ const MenuWrapper = styled.div`
 
 const SiteTitle = styled.h1`
   display: flex;
+  color: #dcdcdc;
 
   /* Device = Tablets, iPads (portrait) */
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -91,6 +92,7 @@ const SiteTitle = styled.h1`
 
 const NameBoard = styled.h5`
   display: flex;
+  color: #dcdcdc;
 
   /* Device = Tablets, iPads (portrait) */
   @media (min-width: 768px) and (max-width: 1024px) {
