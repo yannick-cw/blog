@@ -28,4 +28,7 @@ Some drawbacks of that simple solution are:
   * hitting `:tab close` when not in the zoomed in window closes the current tab, that can be disturbing
   * cursor position is not preserved when zooming out
 
-There is also the plugin [zoomwintab](https://github.com/troydm/zoomwintab.vim) if you are looking for a more elaborate solution.
+### Zoom status in statusbar
+
+I published my minimal zoom plugin, which also allow you to show the zoom state in the statusline.
+You can check it out [here](https://github.com/yannick-cw/vimzoom)
