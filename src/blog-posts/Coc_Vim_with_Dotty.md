@@ -86,23 +86,28 @@ To run the language server from Vim, we need to put all the needed commands in a
 #!/bin/sh
 # launches the dotty language server
 launch_server () {
-  # reads the dotty languageserver version from the file produced with `sbt configureIDE`
-  LANGUAGE_SERVER="$(cat .dotty-ide-artifact)"
-  # downloads the dotty languageserver and runs it with coursier
-  coursier launch "$LANGUAGE_SERVER" -M dotty.tools.languageserver.Main -- -stdio
+  # reads the dotty languageserver version 
+  # from the file produced with `sbt configureIDE`
+  LSP="$(cat .dotty-ide-artifact)"
+  # downloads the dotty languageserver 
+  # and runs it with coursier
+  coursier launch "$LSP" -M dotty.tools.languageserver.Main -- -stdio
 }
 
 # both dotty-ide and artifact file must exists
-if [ ! -f ".dotty-ide.json" ] || [ ! -f ".dotty-ide-artifact" ]
+if [ ! -f ".dotty-ide.json" ] ||\
+   [ ! -f ".dotty-ide-artifact" ]
 then
-  # if files do not exists we create them with `sbt configureIDE`
+  # if files do not exists we 
+  # create them with `sbt configureIDE`
   out="$(sbt configureIDE)" 
   if [ $? -eq 0 ]
   then
     # launch server if `sbt configureIDE` was successful
     launch_server
   else
-    # exit and print failure of `sbt configureIDE`, check if you program compiles
+    # exit and print failure of `sbt configureIDE`,
+    # check if you program compiles
     echo "$out"
     exit 1
   fi
