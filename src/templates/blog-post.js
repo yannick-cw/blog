@@ -1,16 +1,18 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import { PostDate } from '../components/posts'
 import PostTags from '../components/postTags'
 import { PostWrapper } from '../components/postwrapper'
-import {PostDate} from '../components/posts';
 
 export default ({ data }) => {
   const post = data.markdownRemark
 
   return (
     <Layout>
+      <Helmet>
+        <title>{post.frontmatter.title}</title>
+      </Helmet>
       <PostWrapper>
         <PostDate className="datetime">{post.frontmatter.date}</PostDate>
         <PostTags tags={post.frontmatter.tags} />

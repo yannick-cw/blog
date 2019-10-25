@@ -1,11 +1,14 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-
+import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Posts from '../components/posts'
 
 export default ({ data }) => (
   <Layout>
+    <Helmet>
+      <title>Dev Log</title>
+    </Helmet>
     <Posts data={data.allMarkdownRemark.edges} />
   </Layout>
 )
