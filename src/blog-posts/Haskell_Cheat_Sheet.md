@@ -71,6 +71,9 @@ instance Eq Days where
   (==) Mon Mon = True
   (==) Tue Tue = True
   (==) _ _     = False
+
+-- Typeclass requiring some other Typeclass for m
+class Applicative m => Monad (m :: * -> *) where
 ```
 
 #### do syntax
@@ -82,6 +85,23 @@ main = do
   [1]
 ```
 1. `return :: Monad m => a -> m a`
+
+#### Symbols
+
+```haskell
+(>>=) :: Monad m => m a -> (a -> m b) -> m b
+maybeA >>= atToMaybeB
+
+(<*>) :: Applicative f => f (a -> b) -> f a -> f b
+(<$>) :: Functor f => (a -> b) -> f a -> f b
+
+(<$) :: Functor f => a -> f b -> f a
+toMaybeB <$ maybeA -- but returns maybeA
+
+-- dropping result of right or left
+(<*) :: Applicative f => f a -> f b -> f a
+(*>) :: Applicative f => f a -> f b -> f b
+```
 
 
 ## REPL
