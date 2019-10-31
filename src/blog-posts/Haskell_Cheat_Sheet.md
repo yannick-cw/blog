@@ -16,8 +16,9 @@ tags: [haskell, cheatsheet]
 
 ```haskell
 data Bool = False | True
---    [1]   [2]      
+--    [1]   [2]
 ```
+
 1. Type constructor
 2. Data constructor
 
@@ -31,11 +32,11 @@ p1 = Person "Name"
 p2 = Person { name = "Name" }
 ```
 
-
 ```haskell
 newtype Age = Age Int
 ```
-* newtype just a efficient wrapper around single value
+
+- newtype just a efficient wrapper around single value
 
 #### if then else
 
@@ -59,13 +60,31 @@ myAbs x
   | otherwise = x
 ```
 
+Inside case statement
+
+```haskell
+case maybeInt of
+  Just x | x > 0 -> Just x
+  _              -> Nothing
+```
+
+#### Lists
+
+Split lists
+
+```haskell
+import Data.List.Split
+
+splitOn "," "a,b,c,d"
+```
+
 #### Typeclasses
 
 ```haskell
 class Eq a where
   (==) :: a -> a -> Bool
 
-data Days = Mon | Tue 
+data Days = Mon | Tue
 
 instance Eq Days where
   (==) Mon Mon = True
@@ -84,6 +103,7 @@ main = do
   return name
   [1]
 ```
+
 1. `return :: Monad m => a -> m a`
 
 #### Symbols
@@ -103,13 +123,55 @@ toMaybeB <$ maybeA -- but returns maybeA
 (*>) :: Applicative f => f a -> f b -> f b
 ```
 
+#### IO
+
+##### Files
+
+```haskell
+withFile "path" ReadMode (\handler -> hGetContents handler)
+-- or
+readFile "path"
+```
+
+The difference is, that `hGetContents` lazily reads the file, meaning only when you use the result, it actually reads from the file what you need. Downside is, if you read outside of the scope of the `withFile` function, you get an exception, as the file handle was closed already.
+
+#### Exceptions
+
+```haskell
+try :: Exception e => IO a -> IO (Either e a)
+-- defined in terms of catch
+catch :: Exception e => IO a -> (e -> IO a) -> IO a
+```
+
+You need to define what exceptions to consider, others are not handled, e.g. `IOException` for all `IO` errors.
+
+#### System
+
+```haskell
+exitWith :: ExitCode -> IO a
+exitFailure :: IO a
+```
+
+## Language Extensions
+
+##### LambdaCase
+
+Allows:
+
+```haskell
+\case
+    Just v  -> doX
+    Nothing -> doY
+```
 
 ## REPL
 
 #### Query Type
+
 `Prelude> :type "string"`
 
 #### Run REPL in project
+
 `stack repl` inside project or `cabal repl`
 
 ## Projects
@@ -123,16 +185,25 @@ module What (Import1, Import2) where
 ```
 
 #### Importing
+
 ```haskell
 import qualified Data.Bool
          [1]
 ```
+
 1. `Data.Bool.bool` can now not be called directly anymore, only fully qualified
 
 ```haskell
 import qualified Data.Bool as B
                              [1]
 ```
+
 1. Like this call with `B.bool` for renaming
 
+## Debugging
 
+```haskell
+import Debug.Trace.trace
+
+ trace "This is logged" thisIsReturned
+```
