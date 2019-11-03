@@ -2,6 +2,7 @@
 title: 'Running tests with vim-test'
 date: '2019-09-20'
 tags: ['vim', 'typescript']
+description: ''
 ---
 
 Having the test results in-line in the quickfix list (:h quickfix) can be really helpful, as it allows fast test feedback and easy navigation to the failing tests.

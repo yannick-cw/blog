@@ -2,6 +2,7 @@
 title: 'Increment numbers in Vim'
 date: '2019-09-18'
 tags: ['vim']
+description: ''
 ---
 
 Today I learned about a great command to increase numbers in Vim!

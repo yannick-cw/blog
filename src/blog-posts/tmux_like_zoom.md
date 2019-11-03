@@ -2,6 +2,7 @@
 title: 'tmux like zoom'
 date: '2019-09-26'
 tags: [vim]
+description: ''
 ---
 
 I really like the [zoom](https://sanctum.geek.nz/arabesque/zooming-tmux-panes/) feature of tmux. It allows to jump into any window in detail, if you 

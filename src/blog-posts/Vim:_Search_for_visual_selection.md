@@ -2,6 +2,7 @@
 title: 'Vim: Search for visual selection'
 date: '2019-09-19'
 tags: ['vim']
+description: ''
 ---
 
 The `*` command is awesome in Vim, as it let's you search for the word currently under the cursor as in:

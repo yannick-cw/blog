@@ -2,6 +2,7 @@
 title: 'Vim with Dotty (using coc vim)'
 date: '2019-10-20'
 tags: [scala, dotty, vim]
+description: 'Dotty comes with its own language server and does not run with coc vim out of the box. This article shows how you can integrate dotty with Vim.'
 ---
 
 ### TL;DR

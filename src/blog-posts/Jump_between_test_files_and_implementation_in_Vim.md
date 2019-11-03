@@ -2,6 +2,7 @@
 title: 'Jump between test files and implementation in Vim'
 date: '2019-09-19'
 tags: ['vim','typescript']
+description: ''
 ---
 
 One thing I was still missing a little bit after switching from IntelliJ to Vim was being able to quickly switch

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import './layout.css'
-import "prismjs/themes/prism.css"
+import 'prismjs/themes/prism.css'
 
 import Sidebar from './sidebar'
 
@@ -27,6 +27,7 @@ const Query = graphql`
       siteMetadata {
         title
         authorName
+        siteDescription
       }
     }
   }
@@ -43,6 +44,7 @@ export default ({ children }) => (
             <meta charSet="utf-8" />
             <meta name="description" content={siteDescription} />
             <title>{title}</title>
+            <html lang="en" />
           </Helmet>
           <Container>
             <Sidebar title={title} authorName={authorName} />

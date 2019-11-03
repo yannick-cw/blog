@@ -2,6 +2,7 @@
 title: 'Vim-test now supports haskell'
 date: '2019-09-26'
 tags: [haskell, vim, testing]
+description: ''
 ---
 
 With this [commit](https://github.com/janko/vim-test/commit/c7886625ede1a3b35fafe4abb8df60db925416a1) vim-test now

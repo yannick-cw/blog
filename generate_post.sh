@@ -10,6 +10,7 @@ echo "---
 title: '$TITLE'
 date: '$date'
 tags: []
+description: ''
 ---
 " >> src/blog-posts/$filename.md
 nvim src/blog-posts/$filename.md

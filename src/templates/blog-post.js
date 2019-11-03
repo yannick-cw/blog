@@ -12,6 +12,7 @@ export default ({ data }) => {
     <Layout>
       <Helmet>
         <title>{post.frontmatter.title}</title>
+        <meta name="description" content={post.frontmatter.description} />
       </Helmet>
       <PostWrapper>
         <PostDate className="datetime">{post.frontmatter.date}</PostDate>
@@ -32,6 +33,7 @@ export const query = graphql`
         title
         date(formatString: "DD MMMM, YYYY")
         tags
+        description
       }
     }
   }

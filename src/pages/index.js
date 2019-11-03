@@ -1,14 +1,10 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Posts from '../components/posts'
 
 export default ({ data }) => (
   <Layout>
-    <Helmet>
-      <title>Dev Log</title>
-    </Helmet>
     <Posts data={data.allMarkdownRemark.edges} />
   </Layout>
 )
@@ -27,6 +23,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             tags
+            description
           }
           excerpt
         }
