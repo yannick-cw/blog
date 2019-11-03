@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
 export const PostWrapper = styled.div`
-  margin: auto;
+  align-self: center;
   padding: 30px;
   max-width: 720px;
   font-size: 14px;
 
   @media (max-width: 414px) {
     padding: 70px 16px 0;
+  }
+  @media (max-width: 1024px) {
+    align-self: initial;
   }
 
   h1 {
