@@ -70,7 +70,7 @@ const MenuWrapper = styled.div`
   }
 `
 
-const SiteTitle = styled.h1`
+const SiteTitle = styled.h2`
   display: flex;
   color: #dcdcdc;
 
