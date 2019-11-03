@@ -45,6 +45,10 @@ export default ({ children }) => (
             <meta name="description" content={siteDescription} />
             <title>{title}</title>
             <html lang="en" />
+            <meta
+              name="google-site-verification"
+              content="JJjnqZx-YFZ0UMU8y3BJWTfxGlG_rmUUrpvws0o0n7g"
+            />
           </Helmet>
           <Container>
             <Sidebar title={title} authorName={authorName} />
