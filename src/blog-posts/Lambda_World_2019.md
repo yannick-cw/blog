@@ -13,10 +13,10 @@ If you are only interested in the best talks, check the TL;DR.
 
 ### TL;DR Watch these
 
-* Pavel
-* Story Telling
-* Bitcoin
-* Martin
+* [Painless software development with Haskell - Paweł Szulc](https://www.youtube.com/watch?v=idU7GdlfP9Q)
+* [A Series of Unfortunate Effects - Robert M. Avram](https://www.youtube.com/watch?v=y5jZnMImbMY)
+* [Functional Smart Contracts - Manuel Chakravarty](https://www.youtube.com/watch?v=7fbHdrcMsEs&t=1s)
+* [Implicits Revisited - Martin Odersky](https://www.youtube.com/watch?v=uPd9kJq-Z8o)
 
 ### Getting there
 
@@ -80,21 +80,20 @@ object Msg
   def hello = "I was compiled by dotty :)"
 ```
 
-You can watch the whole talk [here](TODO).
+You can watch the whole talk [here](https://www.youtube.com/watch?v=uPd9kJq-Z8o).
 
 #### Day 2
 
 Day 2 was more about talks than workshops and two really stood out to me.
-If you are interested in blockchain and/or Haskell give [Functional Smart Contracts](TODO) a watch. In this talk [Manuel Chakravarty](https://twitter.com/TacticalGrace) from Tweag I/O & Input Output presented how there team is working on the [Cardano](https://www.cardano.org/en/home/) blockchain and how they use Haskell to ensure a high level of safety.
+If you are interested in blockchain and/or Haskell give [Functional Smart Contracts](https://www.youtube.com/watch?v=7fbHdrcMsEs) a watch. In this talk [Manuel Chakravarty](https://twitter.com/TacticalGrace) from Tweag I/O & Input Output presented how there team is working on the [Cardano](https://www.cardano.org/en/home/) blockchain and how they use Haskell to ensure a high level of safety.
 
-Later on in the day, when everyone was already getting tired and looking forward to evening party, [Paweł Szulc](https://twitter.com/rabbitonweb) actually managed to have everyone listening to him closely presenting the [Magic of Haskell](TODO), even showing slides with Alpacas to give the listeners some time to check there phones in between. Actually I think that was the only talk where no-one checked there phone ;).
+Later on in the day, when everyone was already getting tired and looking forward to evening party, [Paweł Szulc](https://twitter.com/rabbitonweb) actually managed to have everyone listening to him closely presenting the [Magic of Haskell](https://www.youtube.com/watch?v=idU7GdlfP9Q), even showing slides with Alpacas to give the listeners some time to check there phones in between. Actually I think that was the only talk where no-one checked there phone ;).
 He had a great energy and even better presentation skills, while introducing libraries like [Servant](https://www.servant.dev/) and [Polysemy](https://github.com/polysemy-research/polysemy), which is similar to mtl or tagless final.
-Watch [Painless software development with Haskell](TODO).
 
 ![Alpacca](./media/schulz.jpg)
 
 Unfortunately at the same time there was the other **best** talk of the conference happening, where [Robert M. Avram](https://twitter.com/amrobert11) talked about Effects in fp languages, but in a beautiful fashion.
-People came out of the talk, telling me it was the best talk they have ever seen, so make sure to [watch](TODO) it as well!
+People came out of the talk, telling me it was the best talk they have ever seen, so make sure to [watch](https://www.youtube.com/watch?v=y5jZnMImbMY) it as well!
 
 
 At the end of day 2 there is always the party at the Castillo.
