@@ -10,6 +10,7 @@ import Sidebar from './sidebar'
 const Container = styled.div`
   display: flex;
   height: 100vh;
+  -webkit-overflow-scrolling: touch;
 `
 
 const Content = styled.div`
@@ -17,6 +18,7 @@ const Content = styled.div`
   flex-direction: column;
   flex: 1;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 20px;
   color: #7e7e7e;
 `
