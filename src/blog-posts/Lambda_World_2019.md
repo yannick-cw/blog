@@ -2,6 +2,7 @@
 title: 'Lambda World 2019'
 date: '2019-10-21'
 tags: [fp, conference, scala, haskell]
+description: 'A summary of Lambda World 2019'
 ---
 
 `youtube: https://www.youtube.com/embed/Tfz8dCPaObU`
