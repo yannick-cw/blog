@@ -1,7 +1,7 @@
 ---
-title: 'Sync your Kindle Highlights to Notion: 📓 + 🗒
+title: 'Sync your Kindle Highlights to Notion: 📓 + 🗒'
 date: '2019-11-06'
-tags: [kindle, notion, haskell]
+tags: ['kindle', 'notion', 'haskell']
 description: 'Synchronize from the kindle to notion. Take your clipping highlights and have them as a Notion Page. All of them!'
 ---
 

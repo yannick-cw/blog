@@ -1,7 +1,7 @@
 ---
 title: 'Vim: Substitute across all files'
 date: '2019-11-14'
-tags: [vim]
+tags: ['vim']
 description: 'Substitute across all files in a project in Vim'
 ---
 

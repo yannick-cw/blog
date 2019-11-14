@@ -1,7 +1,7 @@
 ---
 title: 'Haskell Cheat Sheet'
 date: '2019-08-22'
-tags: [haskell, cheatsheet]
+tags: ['haskell', 'cheatsheet']
 description: ''
 ---
 

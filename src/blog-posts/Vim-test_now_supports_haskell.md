@@ -1,7 +1,7 @@
 ---
 title: 'Vim-test now supports haskell'
 date: '2019-09-26'
-tags: [haskell, vim, testing]
+tags: ['haskell', 'vim', 'testing']
 description: ''
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 'tmux like zoom'
 date: '2019-09-26'
-tags: [vim]
+tags: ['vim']
 description: ''
 ---
 
