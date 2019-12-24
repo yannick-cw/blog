@@ -153,6 +153,18 @@ exitWith :: ExitCode -> IO a
 exitFailure :: IO a
 ```
 
+## Libs
+
+Printing text
+```haskell
+import qualified Data.ByteString.Char8         as BS
+import qualified Data.Text.IO                  as TIO
+
+TIO.putStrLn "Text"
+BS.putStrLn json
+
+```
+
 ## Language Extensions
 
 ##### LambdaCase
