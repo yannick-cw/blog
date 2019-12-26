@@ -1,5 +1,5 @@
 ---
-title: 'Writing a Chrome Pluging with Elm'
+title: 'Writing a Chrome Plugin with Elm'
 date: '2019-12-18'
 tags: ['elm', 'plugin']
 description: 'How to write a Chrome / Firefox Plugin with Elm Lang'
