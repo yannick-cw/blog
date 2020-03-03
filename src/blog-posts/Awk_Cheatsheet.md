@@ -36,7 +36,6 @@ description: 'Notes about using awk'
   `awk -F"," '$2>200 {print $0}' filename`
 
 - Multiple conditions can be `&&` `||` `!`
--
 
 ## BEGIN and END
 
@@ -47,7 +46,7 @@ description: 'Notes about using awk'
 
 ## Useful commands
 
-```bash
+```awk
 { print $0; }  # prints $0. In this case, equivalent to 'print' alone
 { exit; }      # ends the program
 { next; }      # skips to the next line of input
@@ -60,4 +59,27 @@ description: 'Notes about using awk'
 }
 { for (i=1; i<x; i++) { ACTION } }
 { for (item in c) { ACTION } }
+```
+
+## Script template
+
+```awk
+BEGIN { # Can be modified by the user
+  FS = ",";   # Field Separator
+  RS = "\n";  # Record Separator (lines)
+  OFS = " ";  # Output Field Separator
+  ORS = "\n"; # Output Record Separator (lines)
+
+  # Set variables
+  Var = 22;
+  print "Running the script"
+}
+
+/J/ && Var == 22 {printArg($1)}
+
+END {
+  print "Done with script"
+}
+
+function printArg(arg) { print arg; }
 ```
