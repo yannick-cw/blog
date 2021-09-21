@@ -26,7 +26,7 @@ Add some nice shortcut to execute the `:A` alternate command.
 nnoremap <Leader>gt :A<CR>
 ```
 
-Add a `.projectionist.json` config file to your project root. Mine is as simple as:
+Add a `.projections.json` config file to your project root. Mine is as simple as:
 ```json
 {
   "src/*.tsx": {
@@ -40,7 +40,7 @@ Add a `.projectionist.json` config file to your project root. Mine is as simple 
   },
   "src/*.test.ts": {
     "alternate": "src/{}.ts"
-  },
+  }
 }
 ```
 
