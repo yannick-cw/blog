@@ -46,20 +46,20 @@ The most basic feature is adding a new task to the todo list.
 
 Adding a new task for today is as easy as hitting `cmd+p`  and selecting `QuickAdd: Add Todo` and adding some description. New tasks always appear in the `Next` group of todos, they are unclassified, basically in the inbox. If the task is something for today you could change the `schedule` date to today and the task moves to your tasks for the day:
 
-![[daily note.gif]]
+![img](media/daily note.gif)
 
 #### send it to the future
 
 If the task is not something you want to tackle today, but some day in the future, you can send it to a specific date in the future. It will only appear on that day again. If I do not know yet when to do it exactly, I often just send it to next week and re-classify it to a specific date if I know better when it should be done. Sending tasks to the future is very powerful, it could be tomorrow or even next year, it helps to keep the tasks for the day to be clear and organized:
 
-![[do_something_future.gif]]
+![img](media/do_something_future.gif)
 
 #### Block it
 
 You can also add a due date, this will rank it higher in priority in the list.
 Oftentimes a particular task can not be worked on as it waits on something else, external or internal. In that case I either send it to the future as well to a day where I expect an answer or I put it into the blocked list:
 
-![[blocked.gif]]
+![img](media/blocked.gif)
 The priority fields can also be used to order tasks in the lists.
 
 ### The more powerful stuff
@@ -68,28 +68,28 @@ The priority fields can also be used to order tasks in the lists.
 
 Very often I have recurring tasks, like preparing 1:1 meetings, managing that works really well with this setup. For example if I want a daily reminder to check my email every day, this will make the task reappear every morning:
 
-![[do_every_day.gif]]
+![img](media/do_every_day.gif)
 
 #### Multimedia
 
 Now oftentimes tasks are not just simple one liners, but need way more context or are even drawings or presentations. It is very easy to change a task into something more powerful at any time, let's say I decide I need a bit more context on the `Create Obsidian Blog Post` task, I can just change it into a new file:
 
-![[to_file.gif]]
+![img](media/to_file.gif)
 
 Visualizations also help me a lot to organize my thoughts, for that I use [excalidraw](https://excalidraw.com/), a great drawing tool which is supported in Obsidian:
 
-![[excali.gif]]
+![img](media/excali.gif)
 
 I even create most of my presentations in obsidian itself as it is very simple and I can keep everything in one place, and I can even present them from obsidian in the browser using the [advanced slides](https://github.com/MSzturc/obsidian-advanced-slides) plugin:
 
-![[presentation.gif]]
+![img](media/presentation.gif)
 
 #### Link it
 
 Basically the todo list has now become a list of markdown files, this gives me unlimited power to add all information and context I need at any time.
 Obsidian is also great to create files linked to each other, making discovery in the future very easy, it creates and awesome graph showing how all of your files are connected:
 
-![[link_files.gif]]
+![img](media/link_files.gif)
 
 
 #### Collect it all
@@ -102,7 +102,7 @@ todo Adding todos from cli
 
 or from my phone:
 
-![[from_ios (2).gif]]
+![img](media/from_ios%20(2).gif)
 
 ### The detailed setup step by step
 
@@ -110,15 +110,15 @@ After installing obsidian on our device there are a few steps needed to configur
 
 First we need to set up an Obsidian Vault in an iCloud folder, the Vault is basically your workspace. For example if you want to separate work and private life or multiple projects they could live in different Vaults.
 
-![[Screen Shot 2023-01-17 at 07.55.58.png]]
+![img](media/Screen Shot 2023-01-17 at 07.55.58.png)
 
 Then we need to activate some of the core plugins shipped with Obsidian, daily notes to have a daily file for each day and slides if you also want to use Obsidian for presentations.
 
-![[Screen Shot 2023-01-17 at 07.59.43.png]]
+![img](media/Screen Shot 2023-01-17 at 07.59.43.png)
 
 Additionally we need some community plugins, Advanced Slides for themes and nice functionality, excalidraw for drawing stuff, quick add for actions to quickly add todos and most importantly, the tasks plugin to get all that fancy todo list behavior.
 
-![[Screen Shot 2023-01-17 at 08.03.02.png]]
+![img](media/Screen Shot 2023-01-17 at 08.03.02.png)
 
 We'll need one file, which will store all the tasks, this is a file that should basically not be touched, as we view the tasks in our daily template or any other place where we query them. For that we create a file called `Todo Source.md` in our vault.
 It will store all tasks and you can add an example one for getting started and seeing if the views work:
@@ -177,23 +177,23 @@ priority is below none
 
 We then activate the daily notes and link the template and create a folder `daily_notes` in our Vault.
 
-![[Screen Shot 2023-01-17 at 08.28.48.png]]
+![img](media/Screen Shot 2023-01-17 at 08.28.48.png)
 
 For the tasks plugin we just configure how to identify tasks, in this case `- [ ] #t tagged with t, I am a task` every listing tagged with `#t` is considered a task.
 
-![[Screen Shot 2023-01-17 at 08.20.05.png]]
+![img](media/Screen Shot 2023-01-17 at 08.20.05.png)
 
 Finally we configure quick actions to get the `QuickAdd: Add Todo` command when hitting `Cmd + p`.
 
-![[Screen Shot 2023-01-17 at 08.35.38.png]]
+![img](media/Screen Shot 2023-01-17 at 08.35.38.png)
 
 For the capture format make sure to add a newline after the `- [ ] #t {{Value}}`, so new tasks are appended in the next line in the `Todo Source.md` file.
 
-![[Screen Shot 2023-01-17 at 08.36.34.png]]
+![img](media/Screen Shot 2023-01-17 at 08.36.34.png)
 
 And lastly we need to enable the command:
 
-![[Screen Shot 2023-01-17 at 08.38.32.png]]
+![img](media/Screen Shot 2023-01-17 at 08.38.32.png)
 
 If you want to have additional sections showing future tasks and summarizing your last week of tasks, that is easy to add in:
 ````markdown
@@ -230,7 +230,7 @@ This allows me to send `todo new item for list` from any place in the terminal t
 #### iOS
 
 On iOS the same quick actions is available in Obsidian, additionally I added an iOS shortcut to directly append text to the `Todo Source.md` file as well. This can be used with Siri, from the home screen or from sharing any webpage or anything else. The shortcut looks the following:
-![[Screen Shot 2023-01-17 at 08.56.52.png]]
+![img](media/Screen Shot 2023-01-17 at 08.56.52.png)
 
 ## Conclusion
 
