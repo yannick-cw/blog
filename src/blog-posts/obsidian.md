@@ -1,15 +1,12 @@
 ---
 title: 'A systematic approach to organizing yourself with Obsidian'
 date: '2023-01-17'
-tags: []
-description: ''
+tags: ['obsidian','todo']
+description: 'How I set up a system to capture, organize, prioritize and execute all the work I am doing and to ensure I don’t forget anything I need to do and to keep as few things as possible in my head'
 ---
-
-# A systematic approach to organizing yourself with Obsidian
-
 In our industry, deep focus work is of major importance. For me, with limited brain capacity available, I realized early on that having as few things in my head as possible allows the most focus on the current task at hand. This is how my love for typed, functional, immutable programming, with languages like Scala or Haskell, developed (less things to reason about at any point, looking at you immutability), at the same time I was not paying enough attention organizing the rest of my work to allow me to get to this focus state often enough.
 
-In 2022 I changed my career at commercetools from an individual contributor role to a management role and realized that managing and organizing myself first is one of the most important steps to set myself up for success.
+In 2021 I changed my career at commercetools from an individual contributor role to a management role and realized that managing and organizing myself first is one of the most important steps to set myself up for success.
 The lessons learned and the method and setup I optimized for myself can be valuable at any point in your career though, as my main focus was to set up a system to *capture, organize, prioritize and execute* all the work I am doing and to ensure I *don't forget anything* I need to do and to keep *as few things as possible* in my head. All the information I need for working should be in *one place*, no mix of items in the email inbox, unread DMs and open browser tabs that are still to be read.
 
 Starting from the core principle, *as few things as possible in my head*, my basic workflow is the following (inspired by [Getting Things Done](https://gettingthingsdone.com/getting-things-done-the-art-of-stress-free-productivity/)):
