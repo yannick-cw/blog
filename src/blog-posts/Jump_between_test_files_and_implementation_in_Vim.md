@@ -40,7 +40,7 @@ Add a `.projections.json` config file to your project root. Mine is as simple as
   },
   "src/*.test.ts": {
     "alternate": "src/{}.ts"
-  },
+  }
 }
 ```
 
