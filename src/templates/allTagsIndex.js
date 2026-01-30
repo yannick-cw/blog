@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-export default ({ data, pageContext }) => {
+const AllTagsIndex = ({ pageContext }) => {
   return (
     <Layout>
       <h3>List of Tags</h3>
@@ -21,3 +21,11 @@ export default ({ data, pageContext }) => {
     </Layout>
   )
 }
+
+export default AllTagsIndex
+
+export const Head = () => (
+  <>
+    <title>All Tags - Dev Log</title>
+  </>
+)

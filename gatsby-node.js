@@ -54,46 +54,47 @@ const createTagPages = (createPage, posts) => {
   })
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-          edges {
-            node {
-              id
-              excerpt
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date(formatString: "DD MMMM, YYYY")
-                tags
-                description
-              }
+  
+  const result = await graphql(`
+    {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            id
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date(formatString: "DD MMMM, YYYY")
+              tags
+              description
             }
           }
         }
       }
-    `).then(result => {
-      const posts = result.data.allMarkdownRemark.edges
+    }
+  `)
 
-      createTagPages(createPage, posts)
+  if (result.errors) {
+    reporter.panicOnBuild('Error loading blog posts', result.errors)
+    return
+  }
 
-      posts.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/blog-post.js`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug
-          }
-        })
-      })
-      resolve()
+  const posts = result.data.allMarkdownRemark.edges
+
+  createTagPages(createPage, posts)
+
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/blog-post.js`),
+      context: {
+        slug: node.fields.slug
+      }
     })
   })
 }

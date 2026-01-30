@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { rhythm } from '../utils/typography'
 import PostTags from '../components/postTags'
 
 const PostTitle = styled.h3`
-  margin-bottom: ${rhythm(1 / 4)};
+  margin-bottom: 0.25rem;
 `
 
 export const PostDate = styled.span`
@@ -20,7 +19,7 @@ const PostLink = styled(Link)`
   color: inherit;
 `
 
-export default ({ data }) => {
+const Posts = ({ data }) => {
   return (
     <>
       {data.map(({ node }) => {
@@ -39,3 +38,5 @@ export default ({ data }) => {
     </>
   )
 }
+
+export default Posts

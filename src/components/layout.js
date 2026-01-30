@@ -1,6 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import './layout.css'
 import 'prismjs/themes/prism.css'
@@ -23,41 +22,27 @@ const Content = styled.div`
   color: #7e7e7e;
 `
 
-const Query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        authorName
-        siteDescription
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          authorName
+          siteDescription
+        }
       }
     }
-  }
-`
+  `)
 
-export default ({ children }) => (
-  <StaticQuery
-    query={Query}
-    render={data => {
-      const { title, siteDescription, authorName } = data.site.siteMetadata
-      return (
-        <>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <meta name="description" content={siteDescription} />
-            <title>{title}</title>
-            <html lang="en" />
-            <meta
-              name="google-site-verification"
-              content="JJjnqZx-YFZ0UMU8y3BJWTfxGlG_rmUUrpvws0o0n7g"
-            />
-          </Helmet>
-          <Container>
-            <Sidebar title={title} authorName={authorName} />
-            <Content>{children}</Content>
-          </Container>
-        </>
-      )
-    }}
-  />
-)
+  const { title, authorName } = data.site.siteMetadata
+
+  return (
+    <Container>
+      <Sidebar title={title} authorName={authorName} />
+      <Content>{children}</Content>
+    </Container>
+  )
+}
+
+export default Layout

@@ -9,7 +9,9 @@ const TagLink = styled(Link)`
   text-transform: uppercase;
 `
 
-export default ({ tags }) => {
+const PostTags = ({ tags }) => {
+  if (!tags) return null
+  
   return (
     <>
       {tags.map((tag, index) => {
@@ -19,7 +21,7 @@ export default ({ tags }) => {
         }
         return (
           <span key={tag}>
-            <TagLink to={`tags/${tag}`}>{tag}</TagLink>
+            <TagLink to={`/tags/${tag}`}>{tag}</TagLink>
             {separator}
           </span>
         )
@@ -27,3 +29,5 @@ export default ({ tags }) => {
     </>
   )
 }
+
+export default PostTags

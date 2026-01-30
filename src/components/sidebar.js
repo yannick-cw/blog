@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa'
 import me from './me.jpg'
 
-const Sidebar = styled.div`
+const SidebarContainer = styled.div`
   /* Device = Tablets, iPads (portrait) */
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 20%;
@@ -125,10 +125,10 @@ const Portrait = styled.img`
   @media (min-width: 320px) and (max-width: 767px) {
     display: none;
   }
- `
+`
 
-export default ({ title, authorName }) => (
-  <Sidebar>
+const Sidebar = ({ title, authorName }) => (
+  <SidebarContainer>
     <StyledLink to="/">
       <SiteTitle>{title}</SiteTitle>
     </StyledLink>
@@ -173,5 +173,7 @@ export default ({ title, authorName }) => (
         </p>
       </div>
     </MenuWrapper>
-  </Sidebar>
+  </SidebarContainer>
 )
+
+export default Sidebar

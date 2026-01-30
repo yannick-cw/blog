@@ -1,9 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
-export default ({ data }) => {
+const PostFilesPage = ({ data }) => {
   return (
-    <>
+    <Layout>
       <h1>My Site's Files</h1>
       <table>
         <thead>
@@ -25,9 +26,17 @@ export default ({ data }) => {
           ))}
         </tbody>
       </table>
-    </>
+    </Layout>
   )
 }
+
+export default PostFilesPage
+
+export const Head = () => (
+  <>
+    <title>Post Files - Dev Log</title>
+  </>
+)
 
 export const query = graphql`
   query {

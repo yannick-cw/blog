@@ -20,5 +20,4 @@ export const PostWrapper = styled.div`
   .datetime {
     color: #8e8e8e;
   }
- }
 `
