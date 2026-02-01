@@ -22,7 +22,8 @@ const Content = styled.div`
   background-color: #f9fafb;
 
   @media (max-width: 767px) {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
+    padding-top: 72px; /* Account for fixed mobile header */
   }
 `
 
