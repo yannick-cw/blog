@@ -41,7 +41,6 @@ module.exports = {
               ]
             }
           },
-          `gatsby-remark-mermaid`,
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
