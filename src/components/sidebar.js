@@ -8,7 +8,7 @@ import {
   FaGithub,
   FaHashtag
 } from 'react-icons/fa'
-import me from './me.jpg'
+import me from './me.png'
 
 const SidebarContainer = styled.div`
   /* Device = Tablets, iPads (portrait) */
