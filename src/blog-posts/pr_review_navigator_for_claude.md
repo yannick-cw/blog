@@ -33,13 +33,11 @@ It'll create for you:
 
 Here's what you get for a PR that adds a user notification feature:
 
----
-
 ## AI Review Navigator
 
 **Summary:** Adds `Notification` entity with repository, service, and REST controller, plus a `NotificationListener` for async delivery.
 
----
+
 
 ### File Relationships & Review Order
 
@@ -82,7 +80,7 @@ flowchart TB
     style T2 fill:#e8f5e9
 ```
 
----
+
 
 ### Suggested Review Order
 
@@ -96,8 +94,6 @@ flowchart TB
 | 6 | `NotificationEvent.scala` | Domain events for notification lifecycle | [View](#) |
 | 7 | `NotificationServiceSpec.scala` | Tests service layer logic | [View](#) |
 | 8 | `NotificationRepositorySpec.scala` | Tests repository CRUD operations | [View](#) |
-
----
 
 ## Core Ideas
 
@@ -123,14 +119,13 @@ This mirrors how a request flows through the system. You see the entry point fir
 For sure only if your project is modelled like this :)
 
 
----
 
 <details>
 <summary><strong>Full Skill File (click to expand)</strong></summary>
 
 Save this as `~/.cursor/skills/pr-review-navigator/SKILL.md`:
 
-```markdown
+````markdown
 ---
 name: PR Review Navigator
 description: This skill should be used when the user asks to "review a PR", "analyze a pull request", "help me review PR", "navigate a PR", "understand this PR", or provides a PR number or URL for review orientation. Generates AI-assisted navigation aids to help humans start reviewing a pull request more efficiently.
@@ -262,6 +257,6 @@ hash=$(echo -n "platform/sphere-project/src/main/scala/components/variants.scala
 - This skill assists with review orientation only
 - The human reviewer makes all judgments about code quality, correctness, and approval
 - If the PR is too large (>30 files), suggest reviewing in logical chunks
-```
+````
 
 </details>

@@ -8,7 +8,7 @@ import Sidebar from './sidebar'
 
 const Container = styled.div`
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-overflow-scrolling: touch;
 `
 
@@ -16,10 +16,14 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 20px;
-  color: #7e7e7e;
+  padding: 3rem 2rem;
+  background-color: #f9fafb;
+
+  @media (max-width: 767px) {
+    padding: 1.5rem 1rem;
+  }
 `
 
 const Layout = ({ children }) => {
