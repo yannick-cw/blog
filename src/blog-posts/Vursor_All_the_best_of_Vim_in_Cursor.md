@@ -1,5 +1,5 @@
 ---
-title: 'Vursor: All the best of Vim in Cursor'
+title: 'Vursor: All the best of Vim in Cursor (or VSCode)'
 date: '2025-12-15'
 tags: [vim, cursor, productivity]
 description: 'Port your Vim muscle memory to Cursor and feel at home again'
@@ -18,6 +18,8 @@ But first of all lets make the interface a bit nicer, hide those tabs. Once you 
 Same as in IntelliJ I only use `shift + tab` for switching through recent files and my shortcuts, e.g. `<leader>ff` to find files by filename.
 
 Alright, so after installing the [VSCodeVim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) extension let's configure.
+
+> **Note:** This config works in both Cursor and VS Code, they share the same settings format.
 
 ## Basic Setup
 
