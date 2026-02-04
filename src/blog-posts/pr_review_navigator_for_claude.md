@@ -244,10 +244,10 @@ GitHub uses SHA256 hashes of file paths for anchors. To construct working links:
 
 **Example:**
 ```bash
-# For file: platform/sphere-project/src/main/scala/components/variants.scala
-hash=$(echo -n "platform/sphere-project/src/main/scala/components/variants.scala" | shasum -a 256 | cut -d' ' -f1)
-# Result: 92b2158595c36ae6e32284dfc231c154cd7d689b8b8c663cafb92b294a00d75a
-# Link: https://github.com/owner/repo/pull/123/files#diff-92b2158595c36ae6e32284dfc231c154cd7d689b8b8c663cafb92b294a00d75a
+# For file: src/services/NotificationService.java
+hash=$(echo -n "src/services/NotificationService.java" | shasum -a 256 | cut -d' ' -f1)
+# Result: a1b2c3d4e5f6... (truncated)
+# Link: https://github.com/owner/repo/pull/123/files#diff-a1b2c3d4e5f6...
 ```
 
 **Important:** Use the file path exactly as returned by `gh pr view --json files`, without modifications. Compute the hash for each file when generating the review table.
