@@ -51,6 +51,31 @@ Here's an example of what a summary might look like:
 
 ![Example summary.md](media/summarymd_example.png)
 
+## Epic Progress Tracking
+
+For projects tied to a Jira epic, the skill can also pull in live progress data. By configuring an epic key in `CLAUDE.md`, the weekly sync queries Jira for all child tickets and their subtasks, then generates ASCII progress bars showing where each ticket stands:
+
+```
+### Epic Progress (PROJ-100)
+
+PROJ-101 Backend API    ████████████████████ 100%  Done
+PROJ-102 Frontend UI    ██████████░░░░░░░░░░  50%  4/8 subtasks
+PROJ-103 Database       ██░░░░░░░░░░░░░░░░░░  10%  1/10 subtasks
+PROJ-104 Auth Service   ░░░░░░░░░░░░░░░░░░░░   0%  Refined
+PROJ-105 Integration    ██░░░░░░░░░░░░░░░░░░  10%  In Progress (0/3)
+PROJ-106 Caching        ███████████████░░░░░  75%  Code Review (0/1)
+PROJ-107 Documentation  ░░░░░░░░░░░░░░░░░░░░   0%  Backlog
+PROJ-108 Testing        ░░░░░░░░░░░░░░░░░░░░   0%  Backlog
+────────────────────────────────────────────────────
+Overall                 █████░░░░░░░░░░░░░░░  31%
+
+*Last updated: 2026-02-04*
+```
+
+The progress calculation is smart about ticket status: a ticket in "Code Review" shows 75% progress even without completed subtasks, and "In Progress" shows at least 10%. This way you see forward movement as work progresses through states, not just when subtasks close.
+
+This renders identically in Obsidian and Confluence, giving the team an instant visual of project health without opening Jira.
+
 ## Keeping It Up-to-Date Effortlessly
 
 How do I keep this up-to-date effortlessly? Well, I use my other skill [Click](/click_recurring_tasks_for_claude/) which is used to update this once a week.
@@ -250,22 +275,27 @@ Usually triggered by weekly click, can also run manually.
    - Read `summary.md`
    - Understand current state, planned changes, history
 
-3. **Analyze changes**
+3. **Update epic progress (if configured)**
+   - Check CLAUDE.md for `Epic` field
+   - If configured, query Jira for epic and child tickets
+   - Update ASCII progress bars in Current State section
+
+4. **Analyze changes**
    - Identify new state changes (things that now exist)
    - Identify new planned items (future work)
    - Identify completed items (move from Planned to History)
    - Identify rejected decisions (add to History with reasoning IF provided)
 
-4. **Generate proposed updates**
+5. **Generate proposed updates**
    - Draft updates to each section as needed
    - Create changelog entries with dates
    - Format: `- YYYY-MM-DD: [description of change]`
 
-5. **Show diff for approval**
+6. **Show diff for approval**
    - Present proposed changes clearly
    - Ask user to approve, modify, or reject
 
-6. **Apply changes**
+7. **Apply changes**
    - Update summary.md with approved changes
    - Clear inbox/inbox.md (keep file with header, remove entries)
    - For each document in inbox/, ask user to choose disposition:
@@ -273,11 +303,49 @@ Usually triggered by weekly click, can also run manually.
      - **Delete**: Remove the file
      - **Keep at top level**: Move to project root (for important docs like sub-RFCs)
 
-7. **Confluence push (if configured)**
+8. **Confluence push (if configured)**
    - Check CLAUDE.md for Confluence config
    - If configured, ask: "Push to Confluence?"
    - If yes: use Confluence MCP to update the page with summary.md content
    - Update "Last synced" date in CLAUDE.md
+
+---
+
+## Epic Progress Tracking
+
+When a project has an associated Jira epic, track progress with ASCII progress bars.
+
+### CLAUDE.md Configuration
+
+Add to the project's CLAUDE.md:
+
+| Field | Value |
+|-------|-------|
+| Key | PROJ-100 |
+| Name | Feature Name |
+
+### Progress Calculation
+
+**Tickets with subtasks:**
+- Base: `(done subtasks / total subtasks) * 100`
+- Minimum 10% if ticket status is "In Progress"
+- Minimum 75% if ticket status is "Code Review"
+
+**Tickets without subtasks:**
+
+| Jira Status | Progress |
+|-------------|----------|
+| Done | 100% |
+| Code Review | 75% |
+| In Progress | 25% |
+| Refined | 0% |
+| Backlog | 0% |
+
+### Bar Characters
+
+- Filled: `█` (20 chars = 100%)
+- Empty: `░`
+- Separator: `─`
 ```
 
 </details>
