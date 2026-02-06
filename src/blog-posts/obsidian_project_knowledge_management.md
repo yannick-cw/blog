@@ -49,7 +49,7 @@ I generally structure the summary document in the following way:
 
 Here's an example of what a summary might look like:
 
-![Example summary.md](media/summarymd_example.png)
+![Example summary.md](media/summary_md_example.png)
 
 ## Epic Progress Tracking
 
