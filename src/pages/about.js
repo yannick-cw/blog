@@ -34,8 +34,9 @@ const AboutPage = () => (
       <Card>
         <Title>About me</Title>
         <Text>
-          I code mostly Scala, TypeScript, and Haskell. On this blog I put all things 
-          I learned or find interesting.
+          Staff engineer working on distributed systems, mostly in Scala and TypeScript.
+          I build AI tools that keep humans in control. On this blog I share what I learn
+          and how I work.
         </Text>
       </Card>
     </Container>
